@@ -1,0 +1,10 @@
+matplotlib
+numpy
+statistics
+PyQt5
+pathlib
+regex
+termcolor
+mplcursors
+eel
+icecream

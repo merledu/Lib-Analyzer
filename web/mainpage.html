@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="stylesheet" href="mainpage.css" />
+    <link rel="stylesheet" href="landingpage.css" />
+    <link rel="stylesheet" href="loadingpage.css" />
+    <script src = "jquery-3.6.0.min.js"></script> 
+    <script type="text/javascript" src="main.js"></script>    
+    <!--script type="text/javascript" src="landing.js"></script-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!--Eel working going on-->
+    <script src = "eel.js"> </script>
+
+
+
+
+    <title>MainPage</title></head>
+    <style>
+      #main{
+        display: block;
+      }
+      #loading{
+        display: none;
+      }
+      #box{
+        display: none;
+      }
+    </style>
+<body>
+  <div id="main">
+
+    <nav >
+        <div class="logo">
+          <div class="arrow-down"></div>
+        </div>
+        <ul>
+          <li>Home</li>
+          <li onclick="location.href='box.html';">Specific Cell Analysis</li>
+          <li>Across Gate Analysis</li>
+        </ul>
+      </nav>
+
+      <section class="clean-block">
+
+        <div class="container">
+
+            <div style="display: flex;justify-content:space-between;align-items: center;">
+                <div class="heading" style="width: 45%;margin-left: 5rem;margin-right: 8rem;">
+                    <h1 style="    color: #00106a;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    margin-bottom: 1rem;">LIB ANALYZER</h1>
+                    <p style="color: #00106a;
+                    font-size: 1.25rem;
+                    line-height: 1.75;
+                    text-align: justify;margin-bottom: 3rem;"> Lib Analyzer enables the user to extract information like, number of cells, area of cells, power at rising/falling edge, leakage power, delay at rising/falling edge etc. from the liberty file. The tool further has capabilities to plot different results on a graph for a better visual judgment. The current version supports comparison of multiple cells.
+                    </p>
+
+
+
+                    <div class="container" js-file-manager>
+                        <fieldset class="file-input">
+                          <legend class="file-input__label">Choose Reference File</legend>
+                          <label class="file-input__real" hidden aria-hidden="true">
+                            <!--  accept=".json" -->
+                            <input type="file" id="applications" multiple js-real-file-input>
+                          </label>
+                          <div class="file-input__input input input__container">
+                            <span class="input__left">
+                            <button type="button" class="input__choose" js-fake-file-input onclick="call_js()">Choose File</button>
+                            <script>
+                              function call_js(){
+                                eel.ask_reffile()
+                              }
+                            </script>
+                            
+                              <span id="refFileName" class="input__no-file" js-no-file>No file chosen</span>
+                            </span>
+                            <span class="input__files chip__container" js-chip-container></span>
+                            <button type="button" class="input__remove" hidden js-remove-files>
+                              <svg><use xlink:href="#sprite-close"></use></svg>
+                            </button>
+                          </div>
+                        </fieldset>
+              
+                        
+              
+                      </div>
+
+                      <div class="container" style="margin-top: 1rem" js-file-manager>
+                        <fieldset class="file-input">
+                          <legend class="file-input__label">Choose Target File</legend>
+                          <label class="file-input__real" hidden aria-hidden="true">
+                            <!--  accept=".json" -->
+                            <input type="file" id="applications" multiple js-real-file-input>
+                          </label>
+                          <div class="file-input__input input input__container">
+                            <span class="input__left">
+                            <button type="button" class="input__choose" js-fake-file-input onclick="call_t()">Choose File</button>
+                            <script>
+                              function call_t(){
+                                eel.ask_targetfile()
+                              }
+                            </script>
+                            
+                              <span id="targetFileName" class="input__no-file" js-no-file>No file chosen</span>
+                            </span>
+                            <span class="input__files chip__container" js-chip-container></span>
+                            <button type="button" class="input__remove" hidden js-remove-files>
+                              <svg><use xlink:href="#sprite-close"></use></svg>
+                            </button>
+                          </div>
+                        </fieldset>
+              
+                        
+              
+                      </div>
+
+                      <div>
+                        <button  style="margin-top: 30px; " onclick="gen_js()">Generate Deatils</button>
+                          <input  type="checkbox" id="genCSV" />
+			<label>Generate CSV </label>
+                        </div>
+
+                </div>
+                <div style="width: 48%" class="image">
+                    <img style="width: 100%;" class="banner-image" src="https://preview.ibb.co/bMi5Y6/banner_img.png" alt="monitoring">
+                </div>
+            </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <div id="loading">
+
+      <div class="wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="gear down"><img class="gear-icon" src="gear.png" widht="100px" height="100px"/></div>
+        <div class="gear up"><img class="gear-icon" src="gear.png"/></div>
+        <div></div>
+        <div></div>
+        <div class="loading-text" style= "color:#00106a" style="margin-left: -100px;" style="width:400px"> <span>Extracting Cell Details...</span></div>
+      </div>
+
+    </div>
+
+    
+
+      <script type="text/javascript" src="/eel.js"></script>
+
+      <script type="text/javascript">
+	eel.expose(getCheckVal)
+	function getCheckVal(){
+		var checkVar = document.getElementById("genCSV");
+		eel.saveCheckVal(checkVar.checked);
+	}
+	
+
+
+        function gen_js(){
+                            var mm = document.getElementById("main");
+                            var ll = document.getElementById("loading");
+                            mm.style.display = "none";
+                            ll.style.display = "block";
+                            eel.gen_details_go()
+                          }
+
+        // eel.expose(startLoading);
+        // function startLoading(){
+        //   window.location.href = "loading.html";
+        //   eel.gen_details_go();
+        // }
+
+        eel.expose(finishLoading);
+        function finishLoading(){
+          // window.location.href = "box.html";
+          // var ll = document.getElementById("loading");
+          // var bb = document.getElementById("box");
+          // ll.style.display = "none";
+          // bb.style.display = "block";
+          window.close();
+        }
+
+        eel.expose(changeTargetFile);
+        function changeTargetFile(fileName){
+          var el = document.getElementById("targetFileName");
+          el.innerHTML = fileName;
+        }
+
+        eel.expose(changeRefFile);
+        function changeRefFile(fileName){
+          var el = document.getElementById("refFileName");
+          el.innerHTML = fileName;
+        }
+
+      </script>
+    
+</body>
+
+
+
+
+
+</html>

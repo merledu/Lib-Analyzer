@@ -1,0 +1,2 @@
+sky130_fd_sc_hd__tt_100C_1v80.lib
+sc12_cln65gplus_base_lvt_tt_typical_max_1p00v_25c.lib

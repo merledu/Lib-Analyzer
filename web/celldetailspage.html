@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="celldetailspage.css" />
+    <link rel="stylesheet" href="mainpage.css" />
+    <script type="text/javascript" src="celldetailspae.js"></script>
+    
+    <title>celldetials</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <div class="arrow-down"></div>
+    </div>
+    <ul>
+      <li>Home</li>
+      <li>Specific Cell Analysis</li>
+      <li>Across Gate Analysis</li>
+    </ul>
+  </nav>
+
+  <section id="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="offset-lg-1 col-lg-10">
+  <div class="switcher-box">
+    <span>Sky water lib files</span>
+    <div class="switcher text-center">
+      <input type="checkbox" class="toggle">
+    </div>
+    <span>Arm lib files</span>
+  </div>
+  <div class="pricing-table pt-65">
+    <div class="tab-content show" id="cash">
+      <div class="row">
+        <div class="col-lg-6">
+          
+          <div class="table-data">
+            <label id="combo1-label" class="combo-label" style="color: #00106a;">Select Cell</label>
+<div class="combo js-select">
+  <div
+       aria-activedescendant="combo1-value"
+       aria-autocomplete="none"
+       aria-controls="listbox1"
+       aria-expanded="false"
+       aria-haspopup="listbox"
+       aria-labelledby="combo1-label"
+       id="combo1"
+       class="combo-input"
+       role="combobox"
+       tabindex="0"
+       >
+    <span class="combo1-value" id="combo1-value"></span>
+  </div>
+  <div class="combo-menu" role="listbox" id="listbox1"></div>
+</div>
+
+
+
+            <h4 style="color: #00106a;">Cell Details</h4>
+            <table>
+              <tr><td>Cell Name</td><td><input type='text' disabled /></td></tr>
+              <tr><td>Function</td><td><input type='text'disabled /></td></tr>
+              <tr><td>Area</td><td><input type='text'disabled /></td></tr>
+              <tr><td>Leakage Power</td><td><input type='text'disabled /></td></tr>
+           </table>
+           <div class="page">
+            <button data-modal="modal-cancel">
+              Generate Details 
+            </button>
+          </div>
+            
+             
+         
+          </div>
+        </div>
+        <div class="col-lg-6">
+          
+          <div class="table-data">
+            <label id="combo1-label" class="combo-label" style="color: #00106a;">Select Pin Detials</label>
+<div class="combo js-select">
+  <div
+       aria-activedescendant="combo1-value"
+       aria-autocomplete="none"
+       aria-controls="listbox1"
+       aria-expanded="false"
+       aria-haspopup="listbox"
+       aria-labelledby="combo1-label"
+       id="combo1"
+       class="combo-input"
+       role="combobox"
+       tabindex="0"
+       >
+    <span class="combo1-value" id="combo1-value"></span>
+  </div>
+  <div class="combo-menu" role="listbox" id="listbox1"></div>
+</div>
+
+            <h4 style="color: #00106a;">Pin Details</h4>
+            <table>
+              <tr><td>Max Capacitance(ns)</td><td><input type='text' disabled /></td></tr>
+              <tr><td>Max Transition(pf)</td><td><input type='text'disabled /></td></tr>
+              
+           </table>
+           <div class="page">
+            <button data-modal="modal-cancel">
+              Generate Details 
+            </button>
+          </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+<p class="labelish">Payment Method:</p>
+<div id="paymentContainer" name="paymentContainer" class="paymentOptions">
+
+    <div id="payCC" class="floatBlock">
+        <label for="paymentCC"> <input id="paymentCC" name="paymentType" type="radio" value="CREDIT_CARD" />  Credit Card  </label>
+    </div>
+
+    <div id="payInvoice" class="floatBlock">
+        <label for="paymentInv"> <input id="paymentInv" name="paymentType" type="radio" value="INVOICE" /> Invoice </label>
+    </div>
+
+    <div id="pay3rdParty" class="floatBlock">
+        <label for="payment3rd"> <input id="payment3rd" name="paymentType" type="radio" /> Third Party </label>
+    </div>
+
+</div>
+</div>
+</section>
+   
+    
+</body>
+</html>
