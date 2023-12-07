@@ -11,6 +11,10 @@ $git clone --branch lib-analyzer https://github.com/merledu/MERL-Softwares-dev.g
 ```
 $cd Desktop/Lib-Analyzer
 ```
+4. Install all requirements
+```
+python3 -m pip install ir req.txt
+```
 3. Run these commands for installing **node_modules** folder
 ```
 
