@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Version=2.0
+Name=Lib Analyzer
+Exec=bash chmod 777 filler.sh
+Exec=bash filler.sh
+Path=/home/mohsin-siddiqui/Desktop/Lib-Analyzer
+X-Icon-Path=/home/mohsin-siddiqui/Desktop/Lib-Analyzer/splash.png
+Icon=/home/mohsin-siddiqui/Desktop/Lib-Analyzer/splash.png
+Name[en_US]=Lib Analyzer
