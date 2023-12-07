@@ -9,7 +9,7 @@ const createMainWindow = () => {
     win.show();
   
     // win.loadFile("index.html")
-win.loadURL('http://localhost:8008/box.html');
+win.loadURL('http://localhost:8007/mainpage.html');
   }
 
 
