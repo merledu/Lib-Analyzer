@@ -6,7 +6,7 @@ def changeIndex(whichOne):
     if whichOne == "box":
         contents[11] = "win.loadURL('http://localhost:8008/box.html');\n"
     elif whichOne == "mainpage":
-        contents[11] = "win.loadURL('http://localhost:8007/mainpage.html');\n"
+        contents[11] = "win.loadURL('http://localhost:8009/mainpage.html');\n"
 
 
     filW = open("index.js", "w")

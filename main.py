@@ -91,5 +91,5 @@ if __name__ == '__main__':
 
     #start("mainpage.html")
     changeIndex("mainpage")
-    start('web/mainpage.html', mode='custom', cmdline_args=['node_modules/electron/dist/electron', '.'], port=8007)
+    start('web/mainpage.html', mode='custom', cmdline_args=['node_modules/electron/dist/electron', '.'], port=8009)
 

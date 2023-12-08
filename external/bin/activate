@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/mohsin-siddiqui/Desktop/MERL-Softwares-dev/Version-2.0.0/external"
+VIRTUAL_ENV="/home/asghar/Desktop/Lib-Analyzer/external"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
