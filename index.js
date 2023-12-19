@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron');
+const PORT = require('./port.json');
 
 const createMainWindow = () => {
   const win = new BrowserWindow({show: false,webPreferences: {
@@ -8,8 +9,7 @@ const createMainWindow = () => {
     
     win.show();
   
-    // win.loadFile("index.html")
-win.loadURL('http://localhost:8007/mainpage.html');
+win.loadURL(`http://localhost:${PORT.port}/box.html`);
   }
 
 

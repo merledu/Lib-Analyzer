@@ -9,6 +9,9 @@ import os
 from subprocess import *
 from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog
 from PyQt5.QtGui import QIcon
+from util import get_port
+from port_manip import throw_port_json
+import eel
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -81,6 +84,7 @@ f"background-image: url('{Path.cwd()}/splash5.png');\n"
         print('done sleeping!')
         MainWindow.close()
         call(["python3", f"{Path.cwd()}/main.py"])
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -88,5 +92,8 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
+    # port = get_port()
+    # throw_port_json(port)    
     ui.execute_function_threaded(func=lambda: ui.auto_close(100,MainWindow))
+    # eel.start('web/mainpage.html', mode='custom', cmdline_args=['node_modules/electron/dist/electron', '.'], port=port)
     sys.exit(app.exec_())

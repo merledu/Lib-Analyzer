@@ -4,6 +4,9 @@ from eel import start, init
 from changeIndex import changeIndex
 from icecream import ic
 from across_gate_analysis import delay_vs_output_cap_graph, delay_vs_input_trans_graph
+from util import get_port
+# from replacer import replacer
+from port_manip import throw_port_json
 if __name__ == "__main__":
     init("web")
     
@@ -107,6 +110,7 @@ if __name__ == "__main__":
 
     changeIndex("box")
 
-
-
-    start('box.html', mode='custom', cmdline_args=['node_modules/electron/dist/electron', '.'], port=8008)
+    port1 = get_port()
+    # replacer(port)
+    throw_port_json(port1)
+    start('box.html', mode='custom', cmdline_args=['node_modules/electron/dist/electron', '.'], port=port1)

@@ -8,6 +8,9 @@ from eel import init,start
 from icecream import ic
 import time
 from changeIndex import changeIndex
+from util import get_port
+from replacer import replacer
+from port_manip import throw_port_json
 
 if __name__ == '__main__':
     os.system('source external/bin/activate')
@@ -91,5 +94,8 @@ if __name__ == '__main__':
 
     #start("mainpage.html")
     changeIndex("mainpage")
-    start('web/mainpage.html', mode='custom', cmdline_args=['node_modules/electron/dist/electron', '.'], port=8009)
+    port2 = get_port()
+    # replacer(port)
+    throw_port_json(port2)
+    start('web/mainpage.html', mode='custom', cmdline_args=['node_modules/electron/dist/electron', '.'], port=port2)
 
