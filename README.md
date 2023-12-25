@@ -2,7 +2,7 @@
 Lib Analyzer is an application which is used to analyze the cells in the liberty files.
 
 # How to install and run the application
-1. Clone the repository only in desktop location.
+1. Clone the repository only in **Desktop** location.
 ```
 $cd Desktop
 $git clone --branch lib-analyzer https://github.com/merledu/MERL-Softwares-dev.git
